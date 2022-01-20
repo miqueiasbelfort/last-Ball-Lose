@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Last Ball Lose</title>
+</head>
+<body>
+    <div class="container">
+        <div class="popup">
+            <h1>Olá seja bem vindo ao Last Ball Lose</h1>
+            <span>By Miqueias Belfort</span>
+            <a href="https://github.com/miqueiasbelfort">Repositório do GitHub</a>
+            <div class="inforAndRules">
+                <p>Cada um podera marcar de 1 a 3 bolinhas,
+                para alterar as cores click no butão "mudar cor". Quem marcar a última bolinha perde.</p>
+            </div>
+            <span id="alert">Atenção ainda em desenvolvimento!</span>
+            <button onclick="start()">Start</button>
+        </div>
+        <div class="boxOfGame">
+            <div class="infoColorNow">
+                <span>Cor</span>
+                <div class="ballInfo"></div>
+            </div>
+            <div class="boxOfBalss">
+                <div class="line-of-balls line1">
+                    <div class="balls"></div>
+                    <div class="balls"></div>
+                    <div class="balls"></div>
+                    <div class="balls"></div>
+                    <div class="balls"></div>
+                </div>
+                <div class="line-of-balls line2">
+                    <div class="balls"></div>
+                    <div class="balls"></div>
+                    <div class="balls"></div>
+                    <div class="balls"></div>
+                    <div class="balls"></div>
+                </div>
+                <div class="line-of-balls line3">
+                    <div class="balls"></div>
+                    <div class="balls"></div>
+                    <div class="balls"></div>
+                    <div class="balls"></div>
+                    <div class="balls"></div>
+                </div>
+            </div>
+            <div class="score">Red: 0 Blue: 0</div>
+            <div class="buttonsOfGame">
+                <button onclick="reiniciar()">Reiniciar</button>
+                <button onclick="pontuar()">Pontuar</button>
+                <button onclick="mudarCor()">Mudar Cor</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
