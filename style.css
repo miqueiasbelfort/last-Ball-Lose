@@ -175,3 +175,10 @@ body{
         padding: 5px 0;
     }
 }
+
+.red{
+    background: #970000;
+}
+.blue{
+    background: #290099;
+}

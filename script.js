@@ -12,22 +12,25 @@ function start(){
     boxGame.classList.add('startGame')
 }
 
-balls.forEach(elemt => {
+balls.forEach((elemt, indece) => {
     elemt.addEventListener('click', e => {
 
         clicks++
-        //console.log(clicks)
+        
         if(clicks <= 3){
-            e.target.style.background = '#970000'
-            ballInfoColro.style.background = "#970000"
+
+            e.target.classList.add('red')
+            ballInfoColro.classList.add('red')
+
         } else if (clicks >= 4) {
-            e.target.style.background = "#290099"
-            ballInfoColro.style.background = "#290099"
+
+            e.target.classList.add('blue')
+            ballInfoColro.classList.add('blue')
+
             if(clicks == 6){
                 clicks = 0
             }
         }
-
     })
 })
 
