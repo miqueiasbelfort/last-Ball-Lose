@@ -48,11 +48,11 @@
                     <div class="balls"></div>
                 </div>
             </div>
-            <div class="score">Red: 0 Blue: 0</div>
+            <div class="score">Red: <span id="redPoint"></span> Blue: <span id="bluePoint"></span></div>
             <div class="buttonsOfGame">
                 <button onclick="reiniciar()">Reiniciar</button>
-                <button onclick="pontuar()">Pontuar</button>
-                <button onclick="mudarCor()">Mudar Cor</button>
+                <button id="pontuar">Pontuar</button>
+                <button id="mudarCor" onclick="mudarCor()">Mudar Cor</button>
             </div>
         </div>
     </div>

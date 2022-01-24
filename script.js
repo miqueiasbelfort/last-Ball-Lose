@@ -5,7 +5,12 @@ const ballInfoColro = document.querySelector('.ballInfo')
 let clicks = 0
 const popup = document.querySelector('.popup')
 const boxGame = document.querySelector('.boxOfGame')
-const score = document.querySelector('.score')
+//const score = document.querySelector('.score')
+
+const pontuar = document.getElementById('pontuar')
+
+let bp = 0
+let rp = 0
 
 function start(){
     popup.classList.add('desableGame')
@@ -13,17 +18,17 @@ function start(){
 }
 
 balls.forEach((elemt, indece) => {
+    
     elemt.addEventListener('click', e => {
 
         clicks++
-        
+        console.log(clicks)
         if(clicks <= 3){
 
             e.target.classList.add('red')
             ballInfoColro.classList.add('red')
             if(ballInfoColro.classList.contains('blue')){
                 ballInfoColro.classList.remove('blue')
-                ballInfoColro.classList.add('red')
             }
 
         } else if (clicks >= 4) {
@@ -33,41 +38,61 @@ balls.forEach((elemt, indece) => {
                 ballInfoColro.classList.remove('red')
                 ballInfoColro.classList.add('blue')
             }
-            if(clicks == 6){
+
+        } else if (clicks >= 6){
+            clicks = 0
+        }
+
+
+        pontuar.addEventListener('click', () => {
+            const redPonts = document.getElementById('redPoint')
+            const bluePoint = document.getElementById('bluePoint')
+
+            if(e.target.classList.contains('red')){
+                e.target.classList.remove('red')
+                
+            } else if (e.target.classList.contains('blue')){
+                e.target.classList.remove('blue')
+            }
+
+            if (clicks <= 3){
+                bp++
+                //console.log(bp)
+                bluePoint.innerHTML = bp
+                clicks = 0
+            } else {
+                rp++
+                //console.log(rp)
+                redPonts.innerHTML = rp
                 clicks = 0
             }
-        }
+        
+        })       
     })
 })
 
 function mudarCor(){
     if (clicks <= 3){
         clicks = 3
+
+        if(ballInfoColro.classList.contains('red')){
+            ballInfoColro.classList.remove('red')
+            ballInfoColro.classList.add('blue')
+        }
         //console.log('Blue')
     } else {
         clicks = 0
+
+        if(ballInfoColro.classList.contains('blue')){
+            ballInfoColro.classList.remove('blue')
+            ballInfoColro.classList.add('red')
+        }
         //console.log('Red')
     }
 }
 
-function pontuar(){
-    let redPonts = 0
-    let bluePoint = 0
-
-    if (clicks <= 3){
-        bluePoint++
-        //console.log('ultimo red')
-    } else if (clicks >= 4 && clicks <= 6){
-        redPonts ++
-        //console.log('ultimo blue')
-    }
-
-    score.innerHTML = `Red: ${redPonts} Blue: ${bluePoint}`
-
-}
-
-
 function reiniciar(){
     window.location.reload()
+    clicks = 0
     //console.log(`Parou no ${clicks}`)
 }
