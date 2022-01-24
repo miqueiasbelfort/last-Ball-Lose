@@ -21,12 +21,18 @@ balls.forEach((elemt, indece) => {
 
             e.target.classList.add('red')
             ballInfoColro.classList.add('red')
+            if(ballInfoColro.classList.contains('blue')){
+                ballInfoColro.classList.remove('blue')
+                ballInfoColro.classList.add('red')
+            }
 
         } else if (clicks >= 4) {
 
             e.target.classList.add('blue')
-            ballInfoColro.classList.add('blue')
-
+            if(ballInfoColro.classList.contains('red')){
+                ballInfoColro.classList.remove('red')
+                ballInfoColro.classList.add('blue')
+            }
             if(clicks == 6){
                 clicks = 0
             }
