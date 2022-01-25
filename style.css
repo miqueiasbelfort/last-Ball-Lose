@@ -23,6 +23,9 @@ body{
     align-items: center;
     justify-content: center;
 }
+script{
+    display: block;
+}
 .popup{
     position: absolute;
     background: #ffffff;
