@@ -10,19 +10,19 @@
 <body>
     <div class="container">
         <div class="popup">
-            <h1>Olá seja bem vindo ao Last Ball Lose</h1>
+            <h1>Hello welcome to Last Ball Lose</h1>
             <span>By Miqueias Belfort</span>
-            <a href="https://github.com/miqueiasbelfort">Repositório do GitHub</a>
+            <a href="https://github.com/miqueiasbelfort">Repository in GitHub</a>
             <div class="inforAndRules">
-                <p>Cada um podera marcar de 1 a 3 bolinhas,
-                para alterar as cores click no butão "mudar cor". Quem marcar a última bolinha perde.</p>
+                <p>Each one can mark 1 to 3 balls,
+                    to change the colors click on the "change color" button. Whoever scores the last ball loses.</p>
             </div>
-            <span id="alert">Atenção ainda em desenvolvimento!</span>
+            <!--<span id="alert">Atenção ainda em desenvolvimento!</span>-->
             <button onclick="start()">Start</button>
         </div>
         <div class="boxOfGame">
             <div class="infoColorNow">
-                <span>Cor</span>
+                <span>Color</span>
                 <div class="ballInfo"></div>
             </div>
             <div class="boxOfBalss">
@@ -48,11 +48,10 @@
                     <div class="balls"></div>
                 </div>
             </div>
-            <div class="score">Red: <span id="redPoint"></span> Blue: <span id="bluePoint"></span></div>
             <div class="buttonsOfGame">
-                <button onclick="reiniciar()">Reiniciar</button>
-                <button id="pontuar">Pontuar</button>
-                <button id="mudarCor" onclick="mudarCor()">Mudar Cor</button>
+                <button onclick="reiniciar()">Back</button>
+                <button id="pontuar">Game Restart</button>
+                <button id="mudarCor" onclick="mudarCor()">Change color</button>
             </div>
         </div>
     </div>
